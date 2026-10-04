@@ -1,0 +1,141 @@
+.weather-hourly {
+    margin-top: 18px;
+}
+
+.weather-hourly__wrapper {
+    padding: 15px 25px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background-color: var(--surface);
+}
+
+
+.weather-hourly__title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.weather-hourly__scroller {
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.weather-hourly__list {
+    display: flex;
+    gap: 10px;
+}
+
+.weather-hourly__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+
+    width: 115px;
+    padding: 15px 0;
+
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background-color: var(--surface);
+}
+
+.weather-hourly__time {
+    margin-bottom: 8px;
+}
+
+.weather-hourly__icon {
+    width: 40px;
+    transform: scale(1.6);
+    margin-bottom: 8px;
+}
+
+.weather-hourly__temp {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+@media(max-width: 1200px) {
+    .weather-hourly {
+        margin-top: 16px;
+    }
+
+    .weather-hourly__item {
+        padding: 10px 0;
+        width: 100px;
+    }
+
+    .weather-hourly__temp {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 768px) {
+    .weather-hourly {
+        margin-top: 14px;
+    }
+
+    .weather-hourly__item {
+        width: 80px;
+        padding: 8px 0;
+    }
+
+    .weather-hourly__icon {
+        width: 35px;
+    }
+}
+
+@media(max-width: 650px) {
+    .weather-hourly__item {
+        width: 70px;
+    }
+}
+
+@media(max-width: 480px) {
+    .weather-hourly__wrapper {
+        padding: 15px 20px;
+    }
+
+    .weather-hourly__title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .weather-hourly__list {
+        gap: 6px;
+    }
+
+    .weather-hourly__item {
+        width: 60px;
+    }
+
+    .weather-hourly__time {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .weather-hourly__icon {
+        width: 30px;
+        margin-bottom: 5px;
+    }
+
+    .weather-hourly__temp{
+        font-size: 18px;
+    }
+
+}
+
+@media(max-width: 339px) {
+    .weather-hourly__title {
+        font-size: 14px;
+    }
+
+    .weather-hourly__item {
+        width: 52px;
+        padding: 5px 0;
+    }
+
+    .weather-hourly__temp {
+        font-size: 16px;
+    }
+}

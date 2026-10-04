@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./src/components/header/header.css">
+    <link rel="stylesheet" href="./src/components/welcome-screen/welcome-screen.css">
+    <link rel="stylesheet" href="./src/components/loader/loader.css">
+    <link rel="stylesheet" href="/src/components/error/error.css">
+    <link rel="stylesheet" href="./src/components/weather-current/weather-current.css">
+    <link rel="stylesheet" href="./src/components/weather-hourly/weather-hourly.css">
+    <link rel="stylesheet" href="./src/components/weather-daily/weather-daily.css">
+    <link rel="stylesheet" href="./src/components/footer/footer.css">
+
+    <script type="module" src="./src/main.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <a class="header__logo" href="./" aria-label="Weather главная">
+                <img
+                    class="header__logo-img"
+                    src="./assets/header-icon/logo.svg"
+                    alt=""
+                    width="55"
+                    height="55"
+                >
+                <h1 class="header__logo-name">Weather</h1>
+            </a>
+
+            <form class="header__search" id="weather-form" action="#" method="get">
+                <label class="visually-hidden" for="city">
+                    Введите город
+                </label>
+
+                <svg class="header__search-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                    />
+                </svg>
+
+
+                <input
+                    class="header__search-input"
+                    id="city"
+                    type="search"
+                    name="city"
+                    placeholder="Введите город"
+                    autocomplete="off"
+                >
+            </form>
+
+            <div class="header__theme-switcher" id="theme-switcher">
+                <button
+                    class="header__theme-button header__theme-button--light header__theme-button--active"
+                    data-theme="light"
+                    type="button"
+                    aria-label="Светлая тема"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.41 1.41"></path>
+                        <path d="m17.66 17.66 1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.34 17.66-1.41 1.41"></path>
+                        <path d="m19.07 4.93-1.41 1.41"></path>
+                    </svg>
+                </button>
+
+                <span
+                    class="header__theme-divider"
+                    aria-hidden="true"
+                ></span>
+
+                <button
+                    class="header__theme-button header__theme-button--dark"
+                    data-theme="dark"
+                    type="button"
+                    aria-label="Тёмная тема"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <article class="welcome-screen" id="welcome">
+            <img
+                class="welcome-screen__img"
+                src="./assets/weather-status-icon/partly-cloudy.svg"
+                aria-hidden="true"
+            >
+
+            <p class="welcome-screen__text">Введите название города, чтобы узнать прогноз погоды</p>
+        </article>
+
+        <section class="weather-loader" id="loader" aria-hidden="true"></section>
+
+        <section class="weather-error" id="error"></section>
+
+        <section class="weather-current">
+            <div class="weather-current__container container" id="weather-current"></div>
+        </section>
+
+        <section class="weather-hourly">
+            <div class="weather-hourly__container container" id="weather-hourly"></div>
+        </section>
+
+        <section class="weather-weekly">
+            <div class="weather-weekly__container container" id="weather-daily"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <p class="footer__brand">© 2026 WeatherApp</p>
+            <a 
+                class="footer__link"
+                href="https://open-meteo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Powered by Open-Meteo
+            </a>
+        </div> 
+    </footer>
+</body>
+
+</html>
+

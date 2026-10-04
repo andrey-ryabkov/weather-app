@@ -1,0 +1,90 @@
+.weather-error__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 35px 40px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background-color: var(--surface);
+}
+
+.weather-error__icon {
+    margin-top: 10px;
+    transform: scale(1.6);
+    width: 48px;
+    color: var(--primary);
+    margin-bottom: 25px;
+}
+
+.weather-error__title {
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.weather-error__message {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .weather-error__wrapper {
+        padding: 30px 35px;
+    }
+
+    .weather-error__icon {
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    .weather-error__title {
+        font-size: 26px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .weather-error__wrapper {
+        padding: 25px 30px;
+    }
+
+    .weather-error__icon {
+        width: 40px;
+    }
+
+    .weather-error__title {
+        font-size: 24px;
+    }
+
+    .weather-error__message {
+        min-width: 150px;
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 339px) {
+    .weather-error__wrapper {
+        padding: 20px 25px;
+    }
+
+    .weather-error__icon {
+        width: 36px;
+        margin-bottom: 18px;
+    }
+
+    .weather-error__title {
+        font-size: 22px;
+    }
+
+    .weather-error__message {
+        min-width: 140px;
+        font-size: 13px;
+    }
+}
